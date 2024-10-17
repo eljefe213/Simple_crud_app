@@ -15,8 +15,3 @@ if (isset($_GET['id'])) {
 } else {
     echo "No ID provided.";
 }
-?>
-<form method="post" action="">
-    <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-    <button type="submit" name="delete">Delete</button>
-</form>
