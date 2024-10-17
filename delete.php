@@ -1,8 +1,8 @@
 <?php
 include 'config.php';
 
-if (isset($_POST['delete'])) {
-    $id = $_POST['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
     $query = "DELETE FROM users WHERE id=$id";
     $result = $conn->query($query);
@@ -12,6 +12,8 @@ if (isset($_POST['delete'])) {
     } else {
         echo "Error: " . $conn->error;
     }
+} else {
+    echo "No ID provided.";
 }
 ?>
 <form method="post" action="">
